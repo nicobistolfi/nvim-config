@@ -35,3 +35,7 @@ require "nvchad.autocmds"
 vim.schedule(function()
   require "mappings"
 end)
+
+-- Move selected code up/down with Ctrl+j/k in visual mode
+vim.keymap.set("v", "<C-j>", ":m '>+1<CR>gv=gv", { noremap = true })
+vim.keymap.set("v", "<C-k>", ":m '<-2<CR>gv=gv", { noremap = true })
