@@ -30,7 +30,12 @@ return {
     "frankroeder/parrot.nvim",
     lazy = false,
     dependencies = { "ibhagwan/fzf-lua", "nvim-lua/plenary.nvim" },
+    module = "parrot.completion.blink",
+    name = "parrot",
+    score_offset = 20,
     opts = {
+      show_hidden_files = false,
+      max_items = 50,
       providers = {
       anthropic = {
         api_key = os.getenv("ANTHROPIC_API_KEY"),

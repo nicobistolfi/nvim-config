@@ -39,3 +39,7 @@ end)
 -- Move selected code up/down with Ctrl+j/k in visual mode
 vim.keymap.set("v", "<C-j>", ":m '>+1<CR>gv=gv", { noremap = true })
 vim.keymap.set("v", "<C-k>", ":m '<-2<CR>gv=gv", { noremap = true })
+
+-- Map Option+Backspace to delete entire word in insert mode
+-- On macOS, Option+Backspace sends a special character sequence
+vim.api.nvim_set_keymap('i', '<M-BS>', '<C-w>', { noremap = true })
