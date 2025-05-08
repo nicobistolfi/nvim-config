@@ -14,7 +14,14 @@ return {
   },
 
   -- test new blink
-  { import = "nvchad.blink.lazyspec" },
+  { 
+    import = "nvchad.blink.lazyspec",
+    sources = {
+      per_filetype = {
+        codecompanion =  { "codecompanion" },
+      }
+    }
+  },
 
   {
   	"nvim-treesitter/nvim-treesitter",
@@ -60,5 +67,29 @@ return {
       }
     },
   },
+
+  -- Configure CodeCompanion AI for automcomplete with NVIM
+  {
+    "olimorris/codecompanion.nvim",
+    lazy = false,
+    opts = {
+
+      strategies = {
+        cmd = {
+          adapter = "anthropic",
+        },
+        chat = {
+          adapter = "anthropic",
+        },
+        inline = {
+          adapter = "anthropic",
+        },
+      },
+    },
+    dependencies = {
+      "nvim-lua/plenary.nvim",
+      "nvim-treesitter/nvim-treesitter",
+    },
+  }, 
 
 }
