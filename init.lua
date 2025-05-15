@@ -62,5 +62,5 @@ vim.api.nvim_set_keymap('i', '<C-r>', '<Esc><C-ri>', { noremap = true, silent = 
 
 
 -- Sesssion management for project
-vim.api.nvim_set_keymap('n', '<leader>ss', ':mksession! ./vim-session.vi<CR>', { noremap = true })
+vim.api.nvim_set_keymap('n', '<leader>ss', ':mksession! ./vim-session.vim<CR>', { noremap = true })
 vim.api.nvim_set_keymap('n', '<leader>rs', ':source ./vim-session.vim<CR>', { noremap = true })
