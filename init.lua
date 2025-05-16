@@ -1,6 +1,13 @@
 vim.g.base46_cache = vim.fn.stdpath "data" .. "/base46/"
 vim.g.mapleader = " "
 
+-- MDX Filetypes
+vim.filetype.add({
+  extension = {
+    mdx = 'mdx'
+  }
+})
+
 -- bootstrap lazy and all plugins
 local lazypath = vim.fn.stdpath "data" .. "/lazy/lazy.nvim"
 
@@ -53,9 +60,6 @@ vim.keymap.set("v", "ga", "<cmd>CodeCompanionChat Add<cr>", { noremap = true, si
 -- Expand 'cc' into 'CodeCompanion' in the command line
 vim.cmd([[cab cc CodeCompanion]])
 
--- Enable Astro LSP, dependency to run: npm install -g @astrojs/language-server
-vim.lsp.enable('astro')
-
 -- Insert mode: Ctrl+u for undo, Ctrl+r for redo
 vim.api.nvim_set_keymap('i', '<C-u>', '<Esc>ui', { noremap = true, silent = true })
 vim.api.nvim_set_keymap('i', '<C-r>', '<Esc><C-ri>', { noremap = true, silent = true })
@@ -64,3 +68,6 @@ vim.api.nvim_set_keymap('i', '<C-r>', '<Esc><C-ri>', { noremap = true, silent = 
 -- Sesssion management for project
 vim.api.nvim_set_keymap('n', '<leader>ss', ':mksession! ./vim-session.vim<CR>', { noremap = true })
 vim.api.nvim_set_keymap('n', '<leader>rs', ':source ./vim-session.vim<CR>', { noremap = true })
+
+
+

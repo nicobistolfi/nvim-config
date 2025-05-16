@@ -31,6 +31,17 @@ return {
        "html", "css"
   		},
   	},
+    config = function(_, opts)
+      dofile(vim.g.base46_cache .. "syntax")
+      require("nvim-treesitter.configs").setup(opts)
+      -- tell treesitter to use the markdown parser for mdx files
+      vim.treesitter.language.register('markdown', 'mdx')
+    end,
+  },
+  -- Astro Plugin  
+  {
+    "wuelnerdotexe/vim-astro",
+    opts = {}
   },
 
   {
