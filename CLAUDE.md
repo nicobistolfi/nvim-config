@@ -122,6 +122,8 @@ export ANTHROPIC_API_KEY="your-api-key-here"
 - **Git**: For plugin management via Lazy.nvim
 - **stylua**: Lua code formatting
 - **prettier**: Web development formatting
+- **gopls**: Go language server (`go install golang.org/x/tools/gopls@latest`)
+- **goimports**: Go import formatter (`go install golang.org/x/tools/cmd/goimports@latest`)
 
 ## Performance Optimizations
 
@@ -155,6 +157,7 @@ export ANTHROPIC_API_KEY="your-api-key-here"
 
 - **Lua**: Full LSP and formatting
 - **HTML/CSS**: LSP and prettier formatting  
+- **Go**: Full LSP with gopls, goimports/gofmt formatting
 - **MDX**: Custom filetype with markdown treesitter
 - **Astro**: Syntax highlighting and basic support
 - **JavaScript/TypeScript**: Basic treesitter support
