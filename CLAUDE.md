@@ -18,8 +18,9 @@ This configuration uses:
 - Both plugins use the `ANTHROPIC_API_KEY` environment variable
 
 ### 🎨 Theme & UI
-- **Tokyo Night** theme (`lua/chadrc.lua:9`)
+- **Nord** theme (`lua/chadrc.lua:9`)
 - **Base46** theming system with cached themes for performance
+- **FiraCode Nerd Font** with ligatures support (`lua/options.lua:8`)
 - Custom statusline configuration
 
 ### 📁 File Structure
@@ -124,6 +125,7 @@ export ANTHROPIC_API_KEY="your-api-key-here"
 - **prettier**: Web development formatting
 - **gopls**: Go language server (`go install golang.org/x/tools/gopls@latest`)
 - **goimports**: Go import formatter (`go install golang.org/x/tools/cmd/goimports@latest`)
+- **FiraCode Nerd Font**: Programming font with ligatures (`brew install --cask font-fira-code-nerd-font`)
 
 ## Performance Optimizations
 
@@ -191,6 +193,13 @@ M.base46 = {
     -- Custom highlights
   },
 }
+```
+
+### Font Configuration
+The configuration uses FiraCode Nerd Font at 14pt (`lua/options.lua:8`). To change:
+```lua
+-- In lua/options.lua
+o.guifont = "YourFont:h16"  -- Change font and size
 ```
 
 This configuration provides a modern, AI-enhanced Neovim setup optimized for web development and general programming tasks.
