@@ -28,7 +28,7 @@ return {
   	opts = {
   		ensure_installed = {
   			"vim", "lua", "vimdoc",
-       "html", "css"
+       "html", "css", "go"
   		},
   	},
     config = function(_, opts)
